@@ -1,6 +1,5 @@
 import { urlFor } from '../lib/sanity';
 import Image from 'next/dist/client/image';
-// import Tag from './Tag';
 
 const Card = ({ post }) => {
 	return (
@@ -27,12 +26,6 @@ const Card = ({ post }) => {
 			</div>
 
 			<hr />
-
-			<div className="">
-				{/* {post.categories.map(category) = (
-                    <Tag title={category.title} key={category.id} />
-                )} */}
-			</div>
 		</div>
 	);
 };

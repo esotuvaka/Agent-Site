@@ -1,5 +1,5 @@
-const Tag = () => {
-	return <div></div>;
+const Tag = ({ title }) => {
+	return <div>{title}</div>;
 };
 
 export default Tag;

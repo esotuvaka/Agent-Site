@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const Home = ({ posts }) => {
 	console.log(posts);
@@ -23,6 +24,7 @@ const Home = ({ posts }) => {
 			<Hero />
 			<About />
 			<div className="h-[90vh] w-full bg-white">
+				<div id="properties" className="transparent relative -top-10" />
 				<div className="mx-auto grid w-4/5 grid-cols-3 pt-24">
 					{posts?.map((post) => (
 						<Link key={post._id} href="/">
@@ -32,6 +34,7 @@ const Home = ({ posts }) => {
 				</div>
 			</div>
 			<Contact />
+			<Footer />
 		</div>
 	);
 };

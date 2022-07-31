@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/dist/client/image';
 import Logo from '../public/assets/tamar-logo-b.png';
+import Logo2 from '../public/assets/cb-logo.jpg';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaInstagram, FaFacebook, FaLinkedinIn } from 'react-icons/fa';
 
@@ -60,10 +61,20 @@ const navBar = () => {
 							</li>
 						</Link>
 					</ul>
+
 					<div onClick={handleNav} className="md:hidden">
 						<AiOutlineMenu size={25} />
 					</div>
 				</div>
+				<Link href="/" className="h-[50px] w-[50px]">
+					<Image
+						src={Logo2}
+						alt="/"
+						width="80"
+						height="80"
+						className="hover:cursor-pointer"
+					/>
+				</Link>
 			</div>
 			{/* MOBILE MENU */}
 			<div

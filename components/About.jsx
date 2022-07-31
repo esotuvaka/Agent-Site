@@ -6,6 +6,7 @@ import Tamar from '../public/assets/tamar-profile.jpg';
 const About = () => {
 	return (
 		<div className="flex h-[70vh] bg-white pt-24 ">
+			<div id="about" className="transparent relative -top-44" />
 			<div className="mx-auto grid w-2/3 grid-cols-7 items-center justify-center">
 				<div id="left" className="col-span-4 2xl:m-auto">
 					<h1 className="ad text-5xl uppercase tracking-widest">About</h1>

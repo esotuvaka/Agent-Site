@@ -1,10 +1,11 @@
 import React from 'react';
-import { FaLinkedinIn, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaLinkedinIn, FaFacebook, FaInstagram, FaLink } from 'react-icons/fa';
 
 const Contact = () => {
 	return (
 		<>
-			<div className="  w-full bg-white" id="contact-container">
+			<div className="w-full bg-white pb-20">
+				<div id="contact" className="transparent relative -top-36" />
 				<div className="mx-auto grid h-[70vh] w-2/3 grid-cols-7  pt-24">
 					<div className="col-span-3">
 						<h1 className="ad text-5xl uppercase tracking-widest">CONTACT</h1>
@@ -28,7 +29,11 @@ const Contact = () => {
 								<p className="pt-8 text-xl font-semibold text-neutral-900">
 									COLDWELL BANKER REALTY | DRE# 01891979
 								</p>
-								<div className=""></div>
+								<div id="socials" className="flex pt-4">
+									<FaFacebook className="mx-2 text-2xl transition-all duration-500 hover:cursor-pointer hover:text-neutral-700" />
+									<FaInstagram className="mx-2 text-2xl transition-all duration-500 hover:cursor-pointer hover:text-neutral-700" />
+									<FaLinkedinIn className="mx-2 text-2xl transition-all duration-500 hover:cursor-pointer hover:text-neutral-700" />
+								</div>
 							</div>
 						</div>
 					</div>
