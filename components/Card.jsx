@@ -1,9 +1,10 @@
 import { urlFor } from '../lib/sanity';
 import Image from 'next/dist/client/image';
+import { forwardRef } from 'react';
 
-const Card = ({ post }) => {
+const Card = forwardRef(({ onClick, href, post }, ref) => {
 	return (
-		<div className="">
+		<div className="" href={href} onClick={onClick} ref={ref}>
 			<div className="group relative bg-neutral-700 bg-blend-overlay hover:cursor-pointer">
 				<img
 					className="h-96 w-full  "
@@ -28,6 +29,6 @@ const Card = ({ post }) => {
 			<hr />
 		</div>
 	);
-};
+});
 
 export default Card;

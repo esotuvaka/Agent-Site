@@ -14,7 +14,7 @@ const Hero = () => {
 							rel="noreferrer"
 							href="https://www.linkedin.com/in/tamartarkhanian/"
 							target="_blank"
-							className="cursor-pointer p-6 text-xl text-white duration-300 ease-in hover:scale-110 hover:text-black 2xl:text-2xl"
+							className="cursor-pointer p-6 text-xl text-black duration-300 ease-in hover:scale-110 hover:text-neutral-800 2xl:text-2xl"
 							alt="Link to Tamar's LinkedIn"
 						>
 							<FaLinkedinIn />
@@ -23,7 +23,7 @@ const Hero = () => {
 							rel="noreferrer"
 							href="https://www.facebook.com/tamartarkhanianrealtor"
 							target="_blank"
-							className="cursor-pointer p-6 text-xl text-white duration-300 ease-in hover:scale-110 hover:text-black 2xl:text-2xl"
+							className="cursor-pointer p-6 text-xl text-black duration-300 ease-in hover:scale-110 hover:text-neutral-800 2xl:text-2xl"
 							alt="Link to Tamar's Facebook"
 						>
 							<FaFacebook />
@@ -32,7 +32,7 @@ const Hero = () => {
 							rel="noreferrer"
 							href="https://www.instagram.com/tamartar/"
 							target="_blank"
-							className="cursor-pointer p-6 text-xl text-white duration-300 ease-in hover:scale-110 hover:text-black 2xl:text-2xl"
+							className="cursor-pointer p-6 text-xl text-black duration-300 ease-in hover:scale-110 hover:text-neutral-800 2xl:text-2xl"
 							alt="Link to Tamar's Instagram"
 						>
 							<FaInstagram />

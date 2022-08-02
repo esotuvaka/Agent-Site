@@ -66,7 +66,10 @@ const navBar = () => {
 						<AiOutlineMenu size={25} />
 					</div>
 				</div>
-				<Link href="/" className="h-[50px] w-[50px]">
+				<Link
+					href="https://www.coldwellbanker.com/"
+					className="h-[50px] w-[50px]"
+				>
 					<Image
 						src={Logo2}
 						alt="/"

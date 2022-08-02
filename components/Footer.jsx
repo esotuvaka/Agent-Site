@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../public/assets/tamar-logo-b.png';
-import Logo2 from '../public/assets/cb-logo.jpg';
-import Logo3 from '../public/assets/esotuvaka-logo.png';
+import Logo2 from '../public/assets/cb.png';
+import Logo3 from '../public/assets/elogo.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -11,33 +11,45 @@ const Footer = () => {
 			<div id="ft-content" className="mx-auto mb-8 grid w-2/3 grid-cols-3">
 				<div className="flex flex-row items-center">
 					<Image src={Logo} alt="/" width="50" height="50" className="" />
-					<p className="ml-4">Tamar Tarkhanian Real Estate</p>
+					<p className="ad ml-4 text-xl font-semibold tracking-wider">
+						Tamar Tarkhanian Real Estate
+					</p>
 				</div>
 				<div className="col-span-2">
-					<p className="text-sm">
+					<p className="text-sm ">
 						Tamar is a real estate agent who develops relationships with her
 						clients to better understand their wants and needs, and to better
 						guide them towards a special property they could call home. She
 						strives to ensure that the home buying and selling experience is fun
-						and stress-free, and is committed to working hard with integrity and
-						excellent customer service.
+						and stress-free, and she is committed to working hard with integrity
+						and excellent customer service.
 					</p>
 				</div>
 			</div>
 			<div className="mx-auto mb-8 flex w-2/3 justify-center py-12">
-				<div className="flex w-1/4 justify-end border-y border-y-neutral-800 ">
+				<div className="flex w-1/4 justify-center border-y border-y-neutral-800 ">
 					<Link href="/" className="hover:cursor-pointer">
-						<Image src={Logo2} alt="/" width="90" height="80" className="" />
+						<Image src={Logo2} alt="/" width="300" height="150" className="" />
 					</Link>
 				</div>
-
-				<div className="flex w-1/4 border-y border-y-neutral-800 ">
-					<Link href="/" className="hover:cursor-pointer">
-						<Image src={Logo3} alt="/" width="80" height="80" className="" />
-					</Link>
+				<div className="flex w-1/4 flex-col justify-center border-y border-y-neutral-800">
+					<Image src={Logo3} alt="" width="50" height="100" className="" />
+					<p className="text-center text-xs">
+						Custom Website Design by Eric Otuvaka
+					</p>
 				</div>
 			</div>
 			<div className="mx-auto w-2/3">
+				<p className="text-center text-xs uppercase">
+					Coldwell Banker Real Estate LLC. All Rights Reserved. Coldwell Banker
+					Real Estate LLC fully supports the principles of the Fair Housing Act
+					and the Equal Opportunity Act. Each Coldwell Banker Residential
+					Brokerage office is owned by a subsidiary of NRT LLC. Coldwell Banker®
+					and the Coldwell Banker Logo, Coldwell Banker Previews International®
+					and the Coldwell Banker Previews International Logo, are registered
+					service marks owned by Coldwell Banker Real Estate LLC.
+				</p>
+				<br />
 				<p className="text-center text-xs">
 					31582 COAST HWY LAGUNA BEACH, CA 92651. 714.813.2034 © 2022 COLDWELL
 					BANKER REAL ESTATE. ALL MATERIAL PRESENTED HEREIN IS INTENDED FOR
