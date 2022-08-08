@@ -11,7 +11,9 @@ const Contact = () => {
 						<h1 className="ad text-5xl uppercase tracking-widest">CONTACT</h1>
 						<div>
 							<div className="j flex flex-col">
-								<h2 className="py-4 pt-8 text-3xl">Tamar Tarkhanian</h2>
+								<h2 className="py-4 pt-8 text-3xl font-semibold">
+									Tamar Tarkhanian
+								</h2>
 								<h3 className="pt-4 text-xl font-semibold text-neutral-900">
 									PHONE
 								</h3>

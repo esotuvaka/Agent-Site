@@ -8,23 +8,13 @@ import { FaInstagram, FaFacebook, FaLinkedinIn } from 'react-icons/fa';
 
 const navBar = () => {
 	const [nav, setNav] = useState(false);
-	const [shadow, setShadow] = useState(false);
-	const [navBg] = useState('#ffff');
-	const [linkColor, setLinkColor] = useState('#1f2937');
 
 	const handleNav = () => {
 		setNav(!nav);
 	};
 
 	return (
-		<header
-			style={{ backgroundColor: `${navBg}` }}
-			className={
-				shadow
-					? 'fixed z-[100] h-20  w-full shadow-md'
-					: 'fixed z-[100]  h-20 w-full shadow-md'
-			}
-		>
+		<header className="fixed z-[100] h-20 w-full bg-white shadow-md">
 			<div className="mx-auto flex h-full w-4/5 items-center justify-between md:max-w-[1240px] 2xl:max-w-[67%]">
 				<Link href="/" className="h-[50px] w-[50px] ">
 					<Image
@@ -36,10 +26,7 @@ const navBar = () => {
 					/>
 				</Link>
 				<div>
-					<ul
-						style={{ color: `${linkColor}` }}
-						className="hidden tracking-wider md:flex "
-					>
+					<ul className="hidden tracking-wider md:flex ">
 						<Link href="/">
 							<li className="os ml-10 text-sm uppercase tracking-widest transition-all duration-500 hover:cursor-pointer hover:border-b hover:border-black 2xl:text-xl">
 								Home

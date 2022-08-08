@@ -12,17 +12,17 @@ const About = () => {
 					<h1 className="ad text-5xl uppercase tracking-widest">About</h1>
 					<h2 className="py-4 text-3xl ">Meet Tamar Tarkhanian</h2>
 
-					<p className="os py-2 text-neutral-700 ">
+					<p className="about-paragraph">
 						Team up with a trusted neighborhood partner, and make your real
 						estate dreams come true.
 					</p>
-					<p className="os py-2 text-neutral-700 ">
+					<p className="about-paragraph">
 						I know this area - the right pricing, the latest listings, the ins
 						and outs, and the buzz around town. From search to sale, I&apos;ll
 						provide my strong negotiation skills, expert advice, and unwavering
 						support to help make your experience stress-free.
 					</p>
-					<p className="os py-2 text-neutral-700 ">
+					<p className="about-paragraph">
 						Whether it&apos;s finding you a home with everything on your
 						checklist or helping you get ready to move, I&apos;ve got you
 						covered. Advertising, financing, inspection and closing assistance,
