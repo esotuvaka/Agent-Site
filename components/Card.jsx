@@ -21,7 +21,7 @@ const Card = forwardRef(({ onClick, href, post }, ref) => {
 					{post.username}
 				</p> */}
 
-				<h4 className="os absolute right-0 bottom-0 mr-6 mb-4 hidden text-white group-hover:flex">
+				<h4 className="os absolute right-0 bottom-0 mr-6 mb-4 hidden text-lg text-white group-hover:flex">
 					VIEW DETAILS
 				</h4>
 			</div>

@@ -120,14 +120,20 @@ const Post = ({ post }) => {
 					</div>
 
 					<div className="pl-8">
-						<div className="mb-4 w-3/4  uppercase">
-							{categories?.map((category) => (
-								<>
-									{category && <Tag key={category.id} title={category.title} />}
-								</>
-							))}
-						</div>
-						<hr />
+						{categories && (
+							<>
+								<div className="mb-4 w-3/4  uppercase">
+									{categories?.map((category) => (
+										<>
+											{category && (
+												<Tag key={category.id} title={category.title} />
+											)}
+										</>
+									))}
+								</div>
+								<hr />
+							</>
+						)}
 
 						<p className="os my-2 text-lg">
 							<PortableText value={body} components={PostComponents} />
@@ -172,10 +178,8 @@ const Post = ({ post }) => {
 
 const query = groq`*[_type == "post" && slug.current == $slug][0]{
     title,
-	location,
-	authorImage,
-    "username": author->username,
-    "about": author->bio,
+	location, 
+    "username": author->username, 
     "categories": categories[]->{id, title},
     "authorImage": author->avatar,
     body,
@@ -185,8 +189,7 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
 	image3,
 	image4,
 	image5,
-	image6,
-    postedAt,
+	image6, 
 	beds,
 	baths,
 	sqft,

@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/dist/client/image';
 import Logo from '../public/assets/tamar-logo-b.png';
 import Logo2 from '../public/assets/cb-logo.jpg';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaInstagram, FaFacebook, FaLinkedinIn } from 'react-icons/fa';
+import { gsap, Power4 } from 'gsap';
 
 const navBar = () => {
 	const [nav, setNav] = useState(false);
@@ -13,8 +14,21 @@ const navBar = () => {
 		setNav(!nav);
 	};
 
+	let header = useRef(null);
+
+	useEffect(() => {
+		gsap.fromTo(
+			header,
+			{ opacity: 0, y: -100 },
+			{ opacity: 1, y: 0, delay: 2, duration: 0.8 }
+		);
+	}, []);
+
 	return (
-		<header className="fixed z-[100] h-20 w-full bg-white shadow-md">
+		<header
+			ref={(el) => (header = el)}
+			className="fixed z-[100] h-20 w-full bg-white shadow-md"
+		>
 			<div className="mx-auto flex h-full w-4/5 items-center justify-between md:max-w-[1240px] 2xl:max-w-[67%]">
 				<Link href="/" className="h-[50px] w-[50px] ">
 					<Image
@@ -55,6 +69,7 @@ const navBar = () => {
 				</div>
 				<Link
 					href="https://www.coldwellbanker.com/"
+					target="_blank"
 					className="h-[50px] w-[50px]"
 				>
 					<Image
@@ -87,7 +102,6 @@ const navBar = () => {
 									width="50"
 									height="50"
 									alt="/"
-									priority
 								/>
 							</Link>
 							<div

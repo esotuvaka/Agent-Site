@@ -4,11 +4,9 @@ import { getClient } from '../lib/sanity.server';
 import groq from 'groq';
 import Card from '../components/Card';
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
 const Home = ({ posts }) => {
 	console.log(posts);
@@ -23,7 +21,8 @@ const Home = ({ posts }) => {
 
 			<Hero />
 			<About />
-			<div className="h-[90vh] w-full bg-white">
+			{/* I want to refactor this into a component but it stops working when I do because of the query, and the passing of props. Will get to it eventually */}
+			<div className="h-[90vh] w-full bg-white ">
 				<div id="properties" className="transparent relative -top-10" />
 				<div className="mx-auto grid w-4/5 grid-cols-3 pt-24">
 					{posts?.map((post) => (

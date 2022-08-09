@@ -27,7 +27,7 @@ h1 {
 }
 
 .social-link {
-	@apply cursor-pointer p-6 text-xl text-white duration-300 ease-in hover:scale-110 hover:text-neutral-800 2xl:text-2xl;
+	@apply cursor-pointer p-6 text-xl text-white duration-300 ease-in hover:scale-110 hover:text-neutral-400 2xl:text-2xl;
 }
 
 .about-paragraph {

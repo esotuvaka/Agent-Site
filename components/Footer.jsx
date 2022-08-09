@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const Footer = () => {
 	return (
-		<footer className="bg-neutral-50 py-16">
+		<footer className="bg-neutral-50 py-16 text-black">
 			<div id="ft-content" className="mx-auto mb-8 grid w-2/3 grid-cols-3">
 				<div className="flex flex-row items-center">
 					<Image src={Logo} alt="/" width="50" height="50" className="" />
@@ -27,8 +27,11 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="mx-auto mb-8 flex w-2/3 justify-center py-12">
-				<div className="flex w-1/4 justify-center border-y border-y-neutral-800 ">
-					<Link href="/" className="hover:cursor-pointer">
+				<div className="flex w-1/4 justify-center border-y border-y-black ">
+					<Link
+						href="https://www.coldwellbanker.com/"
+						className="hover:cursor-pointer"
+					>
 						<Image src={Logo2} alt="/" width="300" height="150" className="" />
 					</Link>
 				</div>

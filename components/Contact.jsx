@@ -4,10 +4,10 @@ import { FaLinkedinIn, FaFacebook, FaInstagram, FaLink } from 'react-icons/fa';
 const Contact = () => {
 	return (
 		<>
-			<div className="w-full bg-white pb-20">
-				<div id="contact" className="transparent relative -top-36" />
-				<div className="mx-auto grid h-[70vh] w-2/3 grid-cols-7  pt-24">
-					<div className="col-span-3">
+			<div id="contact" className="w-full bg-white pb-20">
+				<div className="transparent relative " />
+				<div className="mx-auto grid h-[100vh] w-2/3 grid-cols-7  pt-24">
+					<div className="col-span-3 flex flex-col justify-center">
 						<h1 className="ad text-5xl uppercase tracking-widest">CONTACT</h1>
 						<div>
 							<div className="j flex flex-col">
@@ -39,7 +39,7 @@ const Contact = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col-span-4">
+					<div className="col-span-4 flex flex-col justify-center">
 						<div>
 							<form
 								action="https://getform.io/f/ae7386ba-66cf-4f42-8157-1a835eb7c012"
