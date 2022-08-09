@@ -32,13 +32,17 @@ const Hero = () => {
 			{ opacity: 0 },
 			{ opacity: 1, duration: 1, ease: Power4.easeOut, delay: 0.5 }
 		);
-		gsap.fromTo(heroImg, { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1 });
-	});
+		gsap.fromTo(
+			heroImg,
+			{ opacity: 0.7, scale: 1.1 },
+			{ opacity: 1, scale: 1 }
+		);
+	}, []);
 
 	return (
 		<div className="">
 			<div id="home" className="h-screen w-full text-center">
-				<div className="absolute left-0 bottom-0 mx-auto flex justify-center sm:ml-[10%] 2xl:ml-[15%]">
+				<div className="absolute bottom-0 mx-auto flex w-full justify-center sm:ml-[10%] sm:w-min md:left-0 md:bottom-0 2xl:ml-[15%]">
 					<div
 						ref={(el) => (heroSocials = el)}
 						className="flex max-w-[300px] items-center justify-center py-4  "
@@ -97,7 +101,7 @@ const Hero = () => {
 						<div className="">
 							<button
 								ref={(el) => (heroBtn = el)}
-								className="os mx-auto mt-12 flex rounded-sm border-2 border-neutral-900 bg-neutral-900 px-6 py-2 text-xl text-white opacity-0 transition-all duration-500 hover:border-neutral-800 hover:bg-neutral-800 hover:px-8 hover:text-white hover:shadow-md "
+								className="os mx-auto mt-12 flex rounded-sm border-2 border-neutral-900 bg-neutral-900 px-6 py-2 text-white opacity-0 transition-all duration-500 hover:border-neutral-800 hover:bg-neutral-800 hover:px-8 hover:text-white hover:shadow-md md:text-xl "
 							>
 								<Link href="/#contact">BOOK AN APPOINTMENT</Link>
 							</button>

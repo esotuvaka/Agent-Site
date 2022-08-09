@@ -22,9 +22,9 @@ const Home = ({ posts }) => {
 			<Hero />
 			<About />
 			{/* I want to refactor this into a component but it stops working when I do because of the query, and the passing of props. Will get to it eventually */}
-			<div className="h-[90vh] w-full bg-white ">
+			<div className="w-full bg-white md:h-[90vh] ">
 				<div id="properties" className="transparent relative -top-10" />
-				<div className="mx-auto grid w-4/5 grid-cols-3 pt-24">
+				<div className="mx-auto grid w-11/12 grid-cols-1 pt-16 md:w-4/5 md:grid-cols-3 md:pt-24">
 					{posts?.map((post) => (
 						<Link
 							key={post._id}

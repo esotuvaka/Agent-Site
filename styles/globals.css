@@ -6,6 +6,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+article {
+	scroll-behavior: auto;
+}
+
 p {
 	@apply font-['Open_Sans'];
 }
@@ -27,9 +31,9 @@ h1 {
 }
 
 .social-link {
-	@apply cursor-pointer p-6 text-xl text-white duration-300 ease-in hover:scale-110 hover:text-neutral-400 2xl:text-2xl;
+	@apply cursor-pointer p-6 text-xl text-white duration-300 ease-in hover:scale-110 hover:text-neutral-900 2xl:text-2xl;
 }
 
 .about-paragraph {
-	@apply os py-2 text-neutral-700;
+	@apply os py-2 text-sm text-neutral-700 md:text-base;
 }

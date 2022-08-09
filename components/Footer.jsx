@@ -7,27 +7,32 @@ import Link from 'next/link';
 
 const Footer = () => {
 	return (
-		<footer className="bg-neutral-50 py-16 text-black">
-			<div id="ft-content" className="mx-auto mb-8 grid w-2/3 grid-cols-3">
-				<div className="flex flex-row items-center">
+		<footer className="bg-neutral-50 py-8 text-black md:py-16">
+			<div
+				id="ft-content"
+				className="mx-auto mb-4 grid w-11/12 grid-cols-3 md:mb-8 md:w-2/3"
+			>
+				<div className="col-span-3 flex flex-row items-center">
 					<Image src={Logo} alt="/" width="50" height="50" className="" />
-					<p className="ad ml-4 text-xl font-semibold tracking-wider">
+					<p className="ad ml-4 text-lg font-semibold tracking-wider md:ml-4 md:text-xl">
 						Tamar Tarkhanian Real Estate
 					</p>
 				</div>
-				<div className="col-span-2">
+				<div className="col-span-3 mt-2 md:col-span-2 md:mt-0">
 					<p className="text-sm ">
 						Tamar is a real estate agent who develops relationships with her
 						clients to better understand their wants and needs, and to better
-						guide them towards a special property they could call home. She
-						strives to ensure that the home buying and selling experience is fun
-						and stress-free, and she is committed to working hard with integrity
-						and excellent customer service.
+						guide them towards a special property they could call home.
+					</p>
+					<p className="hidden text-sm md:block">
+						She strives to ensure that the home buying and selling experience is
+						fun and stress-free, and she is committed to working hard with
+						integrity and excellent customer service.
 					</p>
 				</div>
 			</div>
-			<div className="mx-auto mb-8 flex w-2/3 justify-center py-12">
-				<div className="flex w-1/4 justify-center border-y border-y-black ">
+			<div className="mx-auto mb-8 flex w-11/12 justify-center md:w-2/3">
+				<div className="flex w-1/2 justify-center border-y border-y-black md:w-1/4 ">
 					<Link
 						href="https://www.coldwellbanker.com/"
 						className="hover:cursor-pointer"
@@ -36,7 +41,7 @@ const Footer = () => {
 					</Link>
 				</div>
 			</div>
-			<div className="mx-auto w-2/3">
+			<div className="mx-auto w-11/12 md:w-2/3">
 				<p className="text-center text-xs uppercase">
 					Coldwell Banker Real Estate LLC. All Rights Reserved. Coldwell Banker
 					Real Estate LLC fully supports the principles of the Fair Housing Act

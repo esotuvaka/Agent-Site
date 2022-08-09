@@ -4,14 +4,16 @@ import { FaLinkedinIn, FaFacebook, FaInstagram, FaLink } from 'react-icons/fa';
 const Contact = () => {
 	return (
 		<>
-			<div id="contact" className="w-full bg-white pb-20">
+			<div id="contact" className="w-full bg-white pb-12 md:pb-20">
 				<div className="transparent relative " />
-				<div className="mx-auto grid h-[100vh] w-2/3 grid-cols-7  pt-24">
-					<div className="col-span-3 flex flex-col justify-center">
-						<h1 className="ad text-5xl uppercase tracking-widest">CONTACT</h1>
+				<div className="mx-auto grid w-11/12 grid-cols-7 md:w-2/3  md:pt-24">
+					<div className="col-span-7 flex flex-col justify-center">
+						<h1 className="ad mt-8 text-5xl uppercase tracking-widest md:mt-0">
+							CONTACT
+						</h1>
 						<div>
-							<div className="j flex flex-col">
-								<h2 className="py-4 pt-8 text-3xl font-semibold">
+							<div className="hidden flex-col md:flex">
+								<h2 className="py-2 text-3xl font-semibold md:py-4 md:pt-8">
 									Tamar Tarkhanian
 								</h2>
 								<h3 className="pt-4 text-xl font-semibold text-neutral-900">
@@ -39,15 +41,15 @@ const Contact = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col-span-4 flex flex-col justify-center">
+					<div className="col-span-7 flex flex-col justify-center md:col-span-4">
 						<div>
 							<form
 								action="https://getform.io/f/ae7386ba-66cf-4f42-8157-1a835eb7c012"
 								method="POST"
 								className="mx-auto flex flex-col "
 							>
-								<h1 className="ad text-5xl text-white">l</h1>
-								<div className="grid w-full gap-4 py-2 pt-8 md:grid-cols-2">
+								<h1 className="ad hidden text-5xl text-white md:block">l</h1>
+								<div className="grid w-full py-2 md:grid-cols-2 md:gap-4 md:pt-8">
 									<div className="flex flex-col">
 										<label htmlFor="Name" className="os py-2 text-xl uppercase">
 											Name
@@ -74,7 +76,7 @@ const Contact = () => {
 										/>
 									</div>
 								</div>
-								<div className="grid w-full gap-4 py-2 md:grid-cols-2">
+								<div className="grid w-full py-2 md:grid-cols-2 md:gap-4">
 									<div className="flex flex-col">
 										<label
 											htmlFor="Email"
@@ -107,7 +109,7 @@ const Contact = () => {
 								<div className="flex flex-col py-2">
 									<label
 										htmlFor="Message"
-										className="os py-2 text-xl uppercase"
+										className="os text-xl uppercase md:py-2"
 									>
 										Message
 									</label>
@@ -118,7 +120,7 @@ const Contact = () => {
 										name="message"
 									></textarea>
 								</div>
-								<button className="os mx-auto mt-12 flex rounded-sm border-2 border-black px-6 py-3 text-xl transition-all duration-500 hover:border-neutral-900 hover:bg-neutral-900 hover:px-8 hover:text-white hover:shadow-md hover:shadow-neutral-500">
+								<button className="os mx-auto mt-4 flex rounded-sm border-2 border-black px-6 py-3 text-xl transition-all duration-500 hover:border-neutral-900 hover:bg-neutral-900 hover:px-8 hover:text-white hover:shadow-md hover:shadow-neutral-500 md:mt-12">
 									Send Message
 								</button>
 							</form>

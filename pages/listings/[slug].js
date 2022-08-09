@@ -4,7 +4,7 @@ import { PortableText } from '@PortableText/react';
 import { urlFor } from '../../lib/sanity';
 import { getClient } from '../../lib/sanity.server';
 import Head from 'next/head';
-import { useState, useReducer } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Contact from '../../components/Contact';
 
 const PostComponents = {
@@ -14,10 +14,6 @@ const PostComponents = {
 		},
 	},
 };
-
-//Need to make the selectedImage the big image and highlight it's border in black in the mini grid below.
-//useState to track the selectedImage, and update setSelectedImage when a mini image is clicked.
-//if selectedImage is the big image then mini image needs to have its border changed to black.
 
 const Post = ({ post }) => {
 	console.log(post);
@@ -45,35 +41,35 @@ const Post = ({ post }) => {
 	return (
 		<>
 			{post && (
-				<article className="mx-auto grid w-11/12 grid-cols-6 py-32">
-					<div className="pt-24">
+				<article className="mx-auto grid w-11/12 grid-cols-6 py-24 pb-0 md:py-32">
+					<div className="col-span-6 md:col-span-1 md:pt-24">
 						<h1 className="ad text-6xl">{title}</h1>
 						<h2 className="os text-2xl">{location}</h2>
 
 						<h3 className="ad my-2 text-2xl font-semibold tracking-wider">
 							{price}
 						</h3>
-						<h4 className="flex w-2/5 items-center justify-center bg-black px-4 py-2 text-center uppercase text-white shadow-md shadow-neutral-600">
+						<h4 className="mb-4 flex w-2/5 items-center justify-center bg-black px-4 py-2 text-center uppercase text-white shadow-md shadow-neutral-600 md:mb-0">
 							{listType}
 						</h4>
 					</div>
 
-					<div className="col-span-4 flex flex-col">
+					<div className="col-span-6 flex flex-col md:col-span-4">
 						<div id="MAIN_IMAGE" className="">
 							<img
 								src={selectedImage} //change to selectedImage
 								alt={post.alt}
-								className="  mx-auto flex h-[80vh] shadow-lg shadow-neutral-600"
+								className="mx-auto hidden shadow-md shadow-neutral-600 md:flex md:h-[80vh] md:shadow-lg"
 							/>
 						</div>
 
-						<div className="mt-12 mb-2 grid grid-cols-3 gap-2">
+						<div className="mt-2 mb-2 grid grid-cols-1 gap-2 md:mt-12 md:grid-cols-3">
 							<img
 								src={urlFor(post.mainImage)}
 								alt={post.alt}
 								onClick={() => setSelectedImage(urlFor(post.mainImage))}
 								className={
-									selectedImage ? 'propImageGallery' : 'propImageGallery'
+									selectedImage ? 'propImageGallery ' : 'propImageGallery '
 								}
 							/>
 							{post.image2 && (
@@ -119,7 +115,7 @@ const Post = ({ post }) => {
 						</div>
 					</div>
 
-					<div className="pl-8">
+					<div className="col-span-6 md:col-span-1 md:pl-8">
 						{categories && (
 							<>
 								<div className="mb-4 w-3/4  uppercase">
@@ -135,7 +131,7 @@ const Post = ({ post }) => {
 							</>
 						)}
 
-						<p className="os my-2 text-lg">
+						<p className="os my-4 mb-6 text-lg md:mb-0">
 							<PortableText value={body} components={PostComponents} />
 						</p>
 						<hr />
@@ -167,7 +163,7 @@ const Post = ({ post }) => {
 							/>
 						</div>
 					</div>
-					<div className="col-span-6 mx-auto w-full">
+					<div className="-pt-20 col-span-6 mx-auto w-full">
 						<Contact />
 					</div>
 				</article>
