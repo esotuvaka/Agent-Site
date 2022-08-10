@@ -7,7 +7,7 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaInstagram, FaFacebook, FaLinkedinIn } from 'react-icons/fa';
 import { gsap, Power4 } from 'gsap';
 
-const navBar = () => {
+const NavBar = () => {
 	const [nav, setNav] = useState(false);
 
 	const handleNav = () => {
@@ -199,4 +199,4 @@ const navBar = () => {
 	);
 };
 
-export default navBar;
+export default NavBar;
