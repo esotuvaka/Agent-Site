@@ -29,7 +29,7 @@ const navBar = () => {
 			ref={(el) => (header = el)}
 			className="fixed z-[100] h-20 w-screen bg-white shadow-md 2xl:w-full"
 		>
-			<div className="mx-auto flex h-full w-4/5 items-center justify-between md:max-w-[1240px] 2xl:max-w-[67%]">
+			<div className="mx-auto flex h-full w-11/12 items-center justify-between md:w-5/6 2xl:max-w-[67%]">
 				<Link href="/" className="h-[50px] w-[50px] ">
 					<Image
 						src={Logo}
@@ -42,24 +42,16 @@ const navBar = () => {
 				<div>
 					<ul className="hidden tracking-wider md:flex ">
 						<Link href="/">
-							<li className="os ml-10 text-sm uppercase tracking-widest transition-all duration-500 hover:cursor-pointer hover:border-b hover:border-black 2xl:text-xl">
-								Home
-							</li>
+							<li className="navLi">Home</li>
 						</Link>
 						<Link href="/#about">
-							<li className="os ml-10 text-sm uppercase tracking-widest transition-all duration-500 hover:cursor-pointer hover:border-b hover:border-black 2xl:text-xl">
-								About
-							</li>
+							<li className="navLi">About</li>
 						</Link>
 						<Link href="/#properties">
-							<li className="os ml-10 text-sm uppercase tracking-widest transition-all duration-500 hover:cursor-pointer hover:border-b hover:border-black 2xl:text-xl">
-								Properties
-							</li>
+							<li className="navLi">Properties</li>
 						</Link>
 						<Link href="/#contact">
-							<li className="os ml-10 text-sm uppercase tracking-widest transition-all duration-500 hover:cursor-pointer hover:border-b hover:border-black 2xl:text-xl">
-								Contact
-							</li>
+							<li className="navLi">Contact</li>
 						</Link>
 					</ul>
 
@@ -101,7 +93,7 @@ const navBar = () => {
 							</Link>
 							<div
 								onClick={handleNav}
-								className="cursor-pointer p-3 text-black"
+								className="cursor-pointer p-3 text-2xl text-black"
 							>
 								<AiOutlineClose />
 							</div>
@@ -143,15 +135,33 @@ const navBar = () => {
 								Let&apos;s Connect
 							</p>
 							<div className="my-4 flex w-full items-center justify-between sm:w-[80%]">
-								<div className="cursor-pointer p-3 shadow-gray-400 duration-300 ease-in hover:scale-105">
+								<a
+									rel="noreferrer"
+									target="_blank"
+									alt="Link to Tamar's LinkedIn"
+									href="https://www.linkedin.com/in/tamartarkhanian/"
+									className="cursor-pointer p-3 shadow-gray-400 duration-300 ease-in hover:scale-105"
+								>
 									<FaLinkedinIn />
-								</div>
-								<div className="cursor-pointer p-3 shadow-gray-400 duration-300 ease-in hover:scale-105">
+								</a>
+								<a
+									rel="noreferrer"
+									target="_blank"
+									alt="Link to Tamar's Facebook"
+									href="https://www.facebook.com/tamartarkhanianrealtor"
+									className="cursor-pointer p-3 shadow-gray-400 duration-300 ease-in hover:scale-105"
+								>
 									<FaFacebook />
-								</div>
-								<div className="cursor-pointer p-3 shadow-gray-400 duration-300 ease-in hover:scale-105">
+								</a>
+								<a
+									rel="noreferrer"
+									target="_blank"
+									alt="Link to Tamar's Instagram"
+									href="https://www.instagram.com/tamartar/"
+									className="cursor-pointer p-3 shadow-gray-400 duration-300 ease-in hover:scale-105"
+								>
 									<FaInstagram />
-								</div>
+								</a>
 							</div>
 						</div>
 					</div>

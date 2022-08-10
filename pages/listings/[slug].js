@@ -26,9 +26,7 @@ const Post = ({ post }) => {
 		listType,
 		categories,
 		body,
-		authorImage,
 		username,
-		about,
 		publishedAt,
 		beds,
 		baths,
@@ -41,29 +39,47 @@ const Post = ({ post }) => {
 	return (
 		<>
 			{post && (
-				<article className="mx-auto grid w-11/12 grid-cols-6 py-24 pb-0 md:py-32">
-					<div className="col-span-6 md:col-span-1 md:pt-24">
-						<h1 className="ad text-6xl">{title}</h1>
-						<h2 className="os text-2xl">{location}</h2>
+				// GIANT mess of grid and media query widths. Should've prepared better with more nested divs rather than grid spanning to adjust content
+				<article className="mx-auto grid grid-cols-6 py-24 pb-0 2xl:py-32">
+					<div className="col-span-6 mx-auto flex w-11/12 justify-between md:w-5/6 2xl:w-2/3">
+						<div className="col-span-6 sm:col-span-3 md:pb-4 lg:col-span-3 ">
+							<h1 className="ad text-6xl">{title}</h1>
+							<h2 className="os text-2xl">{location}</h2>
 
-						<h3 className="ad my-2 text-2xl font-semibold tracking-wider">
-							{price}
-						</h3>
-						<h4 className="mb-4 flex w-2/5 items-center justify-center bg-black px-4 py-2 text-center uppercase text-white shadow-md shadow-neutral-600 md:mb-0">
-							{listType}
-						</h4>
+							<h3 className="ad my-2 text-2xl font-semibold tracking-wider">
+								{price}
+							</h3>
+							<h4 className="mb-4 flex w-2/5 items-center justify-center bg-black px-4 py-2 text-center uppercase text-white shadow-md shadow-neutral-600 md:mb-0 lg:w-1/2">
+								{listType}
+							</h4>
+						</div>
+
+						<div className="hidden items-end justify-end pb-4 sm:flex ">
+							{categories && (
+								<>
+									<div className="hidden flex-col items-end justify-center uppercase sm:flex">
+										{categories?.map((category) => (
+											<>
+												{category && (
+													<Tag key={category.id} title={category.title} />
+												)}
+											</>
+										))}
+									</div>
+								</>
+							)}
+						</div>
 					</div>
-
-					<div className="col-span-6 flex flex-col md:col-span-4">
-						<div id="MAIN_IMAGE" className="">
+					<div className="col-span-6 mx-auto flex w-11/12 flex-col md:w-5/6 lg:col-span-6 xl:grid xl:grid-cols-6 2xl:w-2/3">
+						<div id="MAIN_IMAGE" className="xl:col-span-4">
 							<img
 								src={selectedImage} //change to selectedImage
 								alt={post.alt}
-								className="mx-auto hidden shadow-md shadow-neutral-600 md:flex md:h-[80vh] md:shadow-lg"
+								className="mx-auto hidden shadow-md shadow-neutral-600 md:flex md:h-[430px] lg:h-[70vh] xl:h-[75vh] 2xl:h-[570px]"
 							/>
 						</div>
 
-						<div className="mt-2 mb-2 grid grid-cols-1 gap-2 md:mt-12 md:grid-cols-3">
+						<div className="mt-2 mb-2 grid grid-cols-1 gap-2 md:mt-4 md:grid-cols-3 xl:col-span-2 xl:my-0 xl:ml-4 xl:grid-cols-2 xl:grid-rows-3">
 							<img
 								src={urlFor(post.mainImage)}
 								alt={post.alt}
@@ -115,10 +131,10 @@ const Post = ({ post }) => {
 						</div>
 					</div>
 
-					<div className="col-span-6 md:col-span-1 md:pl-8">
+					<div className="col-span-6 mx-auto w-11/12 md:w-5/6 lg:block xl:grid xl:grid-cols-2 2xl:w-2/3">
 						{categories && (
 							<>
-								<div className="mb-4 w-3/4  uppercase">
+								<div className="mt-4 mb-4 w-3/4 uppercase sm:hidden md:col-span-1 md:mt-0">
 									{categories?.map((category) => (
 										<>
 											{category && (
@@ -127,40 +143,36 @@ const Post = ({ post }) => {
 										</>
 									))}
 								</div>
-								<hr />
 							</>
 						)}
-
-						<p className="os my-4 mb-6 text-lg md:mb-0">
-							<PortableText value={body} components={PostComponents} />
-						</p>
-						<hr />
-
-						<p className="os my-2 text-xl font-semibold">
-							{beds} BEDS / {baths} BATHS / {sqft} Square Feet
-						</p>
-						<hr />
-
-						{features && (
-							<div>
-								<p className="my-2 text-lg font-semibold">
-									Features: {features}
-								</p>
-								<hr />
-							</div>
-						)}
-						{mls && (
-							<h5 className="os my-2 text-xl font-semibold">MLS: {mls}</h5>
-						)}
 						<div>
-							<p className="os mt-2 text-xl font-semibold">
-								Listed by {username} on {publishedAt}
+							<p className="os my-4 mb-6 text-lg xl:pt-4">
+								<PortableText value={body} components={PostComponents} />
 							</p>
-							<img
-								src={urlFor(post.authorImage)}
-								width="100"
-								alt={`property listed by ${username}`}
-							/>
+							<hr className="sm:hidden" />
+						</div>
+						<div className="xl:col-span-1 xl:my-4 xl:flex xl:flex-col xl:items-end xl:pt-4">
+							<p className="os my-4 text-xl font-semibold xl:my-0">
+								{beds} BEDS / {baths} BATHS / {sqft} Square Feet
+							</p>
+							<hr className="sm:hidden" />
+
+							{features && (
+								<div>
+									<p className="my-4 text-lg font-semibold xl:my-0">
+										Features: {features}
+									</p>
+									<hr className="sm:hidden" />
+								</div>
+							)}
+							{mls && (
+								<h5 className="os my-2 text-xl font-semibold">MLS: {mls}</h5>
+							)}
+							<div>
+								<p className="os mt-2 text-xl font-semibold">
+									Listed by {username} on {publishedAt}
+								</p>
+							</div>
 						</div>
 					</div>
 					<div className="-pt-20 col-span-6 mx-auto w-full">
@@ -176,8 +188,7 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
     title,
 	location, 
     "username": author->username, 
-    "categories": categories[]->{id, title},
-    "authorImage": author->avatar,
+    "categories": categories[]->{id, title}, 
     body,
     publishedAt,
     mainImage,

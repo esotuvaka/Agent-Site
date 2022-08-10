@@ -42,7 +42,7 @@ const Hero = () => {
 	return (
 		<div className="">
 			<div id="home" className="h-screen w-full text-center">
-				<div className="absolute bottom-0 mx-auto flex w-full justify-center sm:ml-[10%] sm:w-min md:left-0 md:bottom-0 2xl:ml-[15%]">
+				<div className="absolute bottom-0 mx-auto flex w-full justify-center md:left-0 md:bottom-0 lg:ml-[10%] lg:w-min 2xl:ml-[15%]">
 					<div
 						ref={(el) => (heroSocials = el)}
 						className="flex max-w-[300px] items-center justify-center py-4  "
@@ -94,7 +94,7 @@ const Hero = () => {
 					<div className="absolute z-10 mx-auto w-4/5">
 						<h1
 							ref={(el) => (heroGreet = el)}
-							className="ad py-2 text-6xl font-semibold text-white md:text-8xl 2xl:text-8xl"
+							className="ad py-2 text-6xl font-semibold text-white sm:text-8xl 2xl:text-8xl"
 						>
 							Let&apos;s find your dream home
 						</h1>

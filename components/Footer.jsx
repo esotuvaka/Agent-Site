@@ -7,31 +7,31 @@ import Link from 'next/link';
 
 const Footer = () => {
 	return (
-		<footer className="bg-neutral-50 py-8 text-black md:py-16">
+		<footer className="bg-neutral-50 py-8 text-black md:py-12 lg:py-16">
 			<div
 				id="ft-content"
-				className="mx-auto mb-4 grid w-11/12 grid-cols-3 md:mb-8 md:w-2/3"
+				className="mx-auto mb-4 grid w-11/12 grid-cols-3 md:mb-8 lg:w-11/12 xl:w-4/5 2xl:w-2/3"
 			>
-				<div className="col-span-3 flex flex-row items-center">
+				<div className="col-span-3 mb-4 flex flex-row items-center sm:justify-center lg:col-span-1 lg:mb-0 lg:justify-start">
 					<Image src={Logo} alt="/" width="50" height="50" className="" />
 					<p className="ad ml-4 text-lg font-semibold tracking-wider md:ml-4 md:text-xl">
 						Tamar Tarkhanian Real Estate
 					</p>
 				</div>
-				<div className="col-span-3 mt-2 md:col-span-2 md:mt-0">
-					<p className="text-sm ">
+				<div className="col-span-3 mt-2 md:mt-0 lg:col-span-2">
+					<p className="text-center text-sm lg:text-left">
 						Tamar is a real estate agent who develops relationships with her
 						clients to better understand their wants and needs, and to better
 						guide them towards a special property they could call home.
 					</p>
-					<p className="hidden text-sm md:block">
+					<p className="hidden text-center text-sm md:block lg:text-left">
 						She strives to ensure that the home buying and selling experience is
 						fun and stress-free, and she is committed to working hard with
 						integrity and excellent customer service.
 					</p>
 				</div>
 			</div>
-			<div className="mx-auto mb-8 flex w-11/12 justify-center md:w-2/3">
+			<div className="mx-auto mb-8 flex w-11/12 justify-center xl:w-2/3">
 				<div className="flex w-1/2 justify-center border-y border-y-black md:w-1/4 ">
 					<Link
 						href="https://www.coldwellbanker.com/"
@@ -41,7 +41,7 @@ const Footer = () => {
 					</Link>
 				</div>
 			</div>
-			<div className="mx-auto w-11/12 md:w-2/3">
+			<div className="mx-auto w-11/12 xl:w-4/5 2xl:w-2/3">
 				<p className="text-center text-xs uppercase">
 					Coldwell Banker Real Estate LLC. All Rights Reserved. Coldwell Banker
 					Real Estate LLC fully supports the principles of the Fair Housing Act

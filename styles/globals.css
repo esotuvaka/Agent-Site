@@ -27,7 +27,7 @@ h1 {
 }
 
 .propImageGallery {
-	@apply h-64 w-96 shadow-md shadow-neutral-600 hover:cursor-pointer;
+	@apply h-64 w-96 shadow-md shadow-neutral-600 hover:cursor-pointer sm:h-full sm:w-full;
 }
 
 .social-link {
@@ -35,5 +35,9 @@ h1 {
 }
 
 .about-paragraph {
-	@apply os py-2 text-sm text-neutral-700 md:text-base;
+	@apply os py-2 text-sm text-neutral-800 md:text-base xl:text-lg;
+}
+
+.navLi {
+	@apply os ml-10 text-sm uppercase tracking-widest transition-all duration-500 hover:cursor-pointer hover:border-b hover:border-black lg:text-base xl:text-lg;
 }
