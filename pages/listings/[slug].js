@@ -10,7 +10,14 @@ import Contact from '../../components/Contact';
 const PostComponents = {
 	types: {
 		image: ({ value }) => {
-			return <img className="" alt={value.alt || ' '} src={urlFor(value)} />;
+			return (
+				<>
+					<picture>
+						<source srcSet={urlFor(value)} type="image" />
+						<img className="" alt={value.alt || ' '} src={urlFor(value)} />
+					</picture>
+				</>
+			);
 		},
 	},
 };
