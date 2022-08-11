@@ -1,6 +1,7 @@
 import { urlFor } from '../lib/sanity';
 import { forwardRef } from 'react';
 
+// eslint-disable-next-line react/display-name
 const Card = forwardRef(({ onClick, href, post }, ref) => {
 	return (
 		<div className="" href={href} onClick={onClick} ref={ref}>

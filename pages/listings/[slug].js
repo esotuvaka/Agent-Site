@@ -146,9 +146,9 @@ const Post = ({ post }) => {
 							</>
 						)}
 						<div>
-							<p className="os my-4 mb-6 text-lg xl:pt-4">
+							<div className="os my-4 mb-6 text-lg xl:pt-4">
 								<PortableText value={body} components={PostComponents} />
-							</p>
+							</div>
 							<hr className="sm:hidden" />
 						</div>
 						<div className="xl:col-span-1 xl:my-4 xl:flex xl:flex-col xl:items-end xl:pt-4">
