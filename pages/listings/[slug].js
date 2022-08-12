@@ -5,7 +5,6 @@ import { getClient } from '../../lib/sanity.server';
 import Head from 'next/head';
 import { useState, useEffect, useRef } from 'react';
 import Contact from '../../components/Contact';
-import post from '../../../backend/schemas/post';
 
 const Post = ({ post }) => {
 	console.log(post);
