@@ -1,6 +1,5 @@
 import groq from 'groq';
 import Tag from '../../components/Tag';
-import { PortableText } from '@PortableText/react';
 import { urlFor } from '../../lib/sanity';
 import { getClient } from '../../lib/sanity.server';
 import Head from 'next/head';
