@@ -23,9 +23,6 @@ const PostComponents = {
 
 const Post = ({ post }) => {
 	console.log(post);
-	console.log('main image url here ' + urlFor(post.mainImage));
-
-	const [selectedImage, setSelectedImage] = useState(urlFor(post.mainImage));
 
 	const {
 		title,
@@ -42,6 +39,10 @@ const Post = ({ post }) => {
 		mls,
 		features,
 	} = post;
+
+	console.log('main image url here ' + urlFor(post.mainImage));
+
+	const [selectedImage, setSelectedImage] = useState(urlFor(post.mainImage));
 
 	return (
 		<>
@@ -246,7 +247,8 @@ export async function getStaticPaths() {
 	};
 }
 
-export async function getStaticProps({ params, preview = false }) {
+export async function getStaticProps(context, { params, preview = false }) {
+	const { slug = '' } = context.params;
 	const post = await getClient(preview).fetch(query, { slug: params.slug });
 
 	return {
