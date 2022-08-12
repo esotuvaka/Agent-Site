@@ -5,6 +5,7 @@ import { getClient } from '../../lib/sanity.server';
 import Head from 'next/head';
 import { useState, useEffect, useRef } from 'react';
 import Contact from '../../components/Contact';
+import post from '../../../backend/schemas/post';
 
 const Post = ({ post }) => {
 	console.log(post);
@@ -227,13 +228,14 @@ export async function getStaticPaths() {
 	);
 
 	return {
-		paths: paths.map((slug) => ({ params: { slug } })),
-		fallback: false,
+		paths: paths.map((slug) => ({
+			params: { slug },
+		})),
+		fallback: true,
 	};
 }
 
-export async function getStaticProps(context, { params, preview = false }) {
-	const { slug = '' } = context.params;
+export async function getStaticProps({ params, preview = false }) {
 	const post = await getClient(preview).fetch(query, { slug: params.slug });
 
 	return {
