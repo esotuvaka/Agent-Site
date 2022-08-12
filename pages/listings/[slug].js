@@ -13,6 +13,26 @@ const Post = ({ post }) => {
 
 	const [selectedImage, setSelectedImage] = useState(urlFor(post.mainImage));
 
+	const title = post.title;
+	const location = post.location;
+	const username = post.username;
+	const categories = post.categories;
+	const description = post.description;
+	const publishedAt = post.publishedAt;
+	const mainImage = post.mainImage;
+	const image2 = post.image2;
+	const image3 = post.image3;
+	const image4 = post.image4;
+	const image5 = post.image5;
+	const image6 = post.image6;
+	const beds = post.beds;
+	const baths = post.baths;
+	const sqft = post.sqft;
+	const listType = post.listType;
+	const price = post.price;
+	const mls = post.mls;
+	const features = post.features;
+
 	return (
 		<>
 			{post && (
@@ -38,8 +58,9 @@ const Post = ({ post }) => {
 										{categories?.map((category) => (
 											<>
 												{category && (
-													<Tag key={category.id} title={category.title} />
+													<Tag key={category.title} title={category.title} />
 												)}
+												{console.log('category key / id: ' + category.id)}
 											</>
 										))}
 									</div>
@@ -61,11 +82,11 @@ const Post = ({ post }) => {
 
 						<div className="mt-2 mb-2 grid grid-cols-1 gap-2 md:mt-4 md:grid-cols-3 xl:col-span-2 xl:my-0 xl:ml-4 xl:grid-cols-2 xl:grid-rows-3">
 							<picture>
-								<source srcSet={urlFor(post.mainImage)} type="image" />
+								<source srcSet={urlFor(mainImage)} type="image" />
 								<img
-									src={urlFor(post.mainImage)}
+									src={urlFor(mainImage)}
 									alt={post.alt}
-									onClick={() => setSelectedImage(urlFor(post.mainImage))}
+									onClick={() => setSelectedImage(urlFor(mainImage))}
 									// Main Image variable css styling in case I want to make them more distinguished in the future (color filters, sizing, etc.)
 									className={
 										selectedImage ? 'propImageGallery ' : 'propImageGallery '
@@ -74,55 +95,55 @@ const Post = ({ post }) => {
 							</picture>
 							{post.image2 && (
 								<picture>
-									<source srcSet={urlFor(post.image2)} type="image" />
+									<source srcSet={urlFor(image2)} type="image" />
 									<img
-										src={urlFor(post.image2)}
+										src={urlFor(image2)}
 										alt={post.alt}
-										onClick={() => setSelectedImage(urlFor(post.image2))}
+										onClick={() => setSelectedImage(urlFor(image2))}
 										className="propImageGallery"
 									/>
 								</picture>
 							)}
 							{post.image3 && (
 								<picture>
-									<source srcSet={urlFor(post.image3)} type="image" />
+									<source srcSet={urlFor(image3)} type="image" />
 									<img
-										src={urlFor(post.image3)}
+										src={urlFor(image3)}
 										alt={post.alt}
-										onClick={() => setSelectedImage(urlFor(post.image3))}
+										onClick={() => setSelectedImage(urlFor(image3))}
 										className="propImageGallery"
 									/>
 								</picture>
 							)}
 							{post.image4 && (
 								<picture>
-									<source srcSet={urlFor(post.image4)} type="image" />
+									<source srcSet={urlFor(image4)} type="image" />
 									<img
-										src={urlFor(post.image4)}
+										src={urlFor(image4)}
 										alt={post.alt}
-										onClick={() => setSelectedImage(urlFor(post.image4))}
+										onClick={() => setSelectedImage(urlFor(image4))}
 										className="propImageGallery"
 									/>
 								</picture>
 							)}
 							{post.image5 && (
 								<picture>
-									<source srcSet={urlFor(post.image5)} type="image" />
+									<source srcSet={urlFor(image5)} type="image" />
 									<img
-										src={urlFor(post.image5)}
+										src={urlFor(image5)}
 										alt={post.alt}
-										onClick={() => setSelectedImage(urlFor(post.image5))}
+										onClick={() => setSelectedImage(urlFor(image5))}
 										className="propImageGallery"
 									/>
 								</picture>
 							)}
 							{post.image6 && (
 								<picture>
-									<source srcSet={urlFor(post.image6)} type="image" />
+									<source srcSet={urlFor(image6)} type="image" />
 									<img
-										src={urlFor(post.image6)}
+										src={urlFor(image6)}
 										alt={post.alt}
-										onClick={() => setSelectedImage(urlFor(post.image6))}
+										onClick={() => setSelectedImage(urlFor(image6))}
 										className="propImageGallery"
 									/>
 								</picture>
