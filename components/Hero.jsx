@@ -45,7 +45,7 @@ const Hero = () => {
 				<div className="absolute bottom-0 mx-auto flex w-full justify-center md:left-0 md:bottom-0 lg:ml-[10%] lg:w-min 2xl:ml-[15%]">
 					<div
 						ref={(el) => (heroSocials = el)}
-						className="flex max-w-[300px] items-center justify-center py-4  "
+						className="flex max-w-[300px] items-center justify-center py-4"
 					>
 						<a
 							rel="noreferrer"

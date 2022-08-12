@@ -24,7 +24,7 @@ const Home = ({ posts }) => {
 			{/* I want to refactor this into a component but it stops working when I do because of the query, and the passing of props. Will get to it eventually */}
 			<div className="w-full bg-white pb-4 sm:pb-0 ">
 				{/* Properties id placed inside invisible div for accurate smooth scroll anchor */}
-				<div id="properties" className="absolute -mt-20" />
+				<div id="properties" className="absolute -mt-10" />
 				<div className="mx-auto grid w-11/12 grid-cols-1 pt-8 sm:grid-cols-2 sm:gap-1 sm:pt-12 md:w-11/12 md:pt-16 lg:gap-2 lg:pt-24 xl:grid-cols-3">
 					{posts?.map((post) => (
 						<Link
