@@ -9,22 +9,6 @@ import Contact from '../../components/Contact';
 const Post = ({ post }) => {
 	console.log(post);
 
-	const {
-		title,
-		location,
-		listType,
-		categories,
-		description,
-		username,
-		publishedAt,
-		beds,
-		baths,
-		sqft,
-		price,
-		mls,
-		features,
-	} = post;
-
 	console.log('main image url here ' + urlFor(post.mainImage));
 
 	const [selectedImage, setSelectedImage] = useState(urlFor(post.mainImage));
@@ -230,7 +214,7 @@ export async function getStaticPaths() {
 		paths: paths.map((slug) => ({
 			params: { slug },
 		})),
-		fallback: true,
+		fallback: false,
 	};
 }
 
