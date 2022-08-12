@@ -6,21 +6,6 @@ import Head from 'next/head';
 import { useState, useEffect, useRef } from 'react';
 import Contact from '../../components/Contact';
 
-const PostComponents = {
-	types: {
-		image: ({ value }) => {
-			return (
-				<>
-					<picture>
-						<source srcSet={urlFor(value)} type="image" />
-						<img className="" alt={value.alt || ' '} src={urlFor(value)} />
-					</picture>
-				</>
-			);
-		},
-	},
-};
-
 const Post = ({ post }) => {
 	console.log(post);
 
@@ -243,7 +228,7 @@ export async function getStaticPaths() {
 
 	return {
 		paths: paths.map((slug) => ({ params: { slug } })),
-		fallback: true,
+		fallback: false,
 	};
 }
 
