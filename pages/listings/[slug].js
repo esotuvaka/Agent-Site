@@ -33,7 +33,7 @@ const Post = ({ post }) => {
 		location,
 		listType,
 		categories,
-		body,
+		description,
 		username,
 		publishedAt,
 		beds,
@@ -177,7 +177,7 @@ const Post = ({ post }) => {
 						)}
 						<div>
 							<div className="os my-4 mb-6 text-lg xl:pt-4">
-								<PortableText value={body} components={PostComponents} />
+								<p>{description}</p>
 							</div>
 							<hr className="sm:hidden" />
 						</div>
@@ -219,7 +219,7 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
 	location, 
     "username": author->username, 
     "categories": categories[]->{id, title}, 
-    body,
+    description,
     publishedAt,
     mainImage,
 	image2,
