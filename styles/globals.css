@@ -39,5 +39,5 @@ h1 {
 }
 
 .navLi {
-	@apply os ml-10 text-sm uppercase tracking-widest transition-all duration-500 hover:cursor-pointer hover:border-b hover:border-black lg:text-base xl:text-lg;
+	@apply os ml-10 border-b text-sm uppercase tracking-widest transition-all duration-500 hover:cursor-pointer hover:border-b hover:border-black lg:text-base xl:text-lg;
 }
