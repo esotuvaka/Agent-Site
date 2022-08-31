@@ -13,27 +13,23 @@ const Contact = () => {
 						</h1>
 						<div>
 							<div className="hidden flex-col lg:flex">
-								<h2 className="py-2 text-3xl md:py-4 lg:py-2">
-									Tamar Tarkhanian
-								</h2>
+								<h2 className="py-2 text-3xl md:py-4 lg:py-2">JOHN DOE</h2>
 								<h3 className="pt-4 text-xl font-semibold text-neutral-900 lg:text-lg">
 									PHONE
 								</h3>
-								<p className="text-xl">714.813.2034</p>
+								<p className="text-xl">123.456.7890</p>
 								<h3 className="pt-4 text-xl font-semibold text-neutral-900 lg:text-lg">
 									EMAIL
 								</h3>
-								<p className="text-xl lg:text-lg">
-									TAMAR.TARKHANIAN@CBREALTY.COM
-								</p>
+								<p className="text-xl lg:text-lg">JOHN.DOE@EXAMPLE.COM</p>
 								<h3 className="pt-4 text-xl font-semibold text-neutral-900 lg:text-lg">
 									ADDRESS
 								</h3>
 								<p className="text-xl lg:text-lg">
-									31582 COAST HWY LAGUNA BEACH, CA 92651
+									7777 COAST HWY LAGUNA BEACH, CA 92651
 								</p>
 								<p className="pt-8 text-xl font-semibold text-neutral-900 lg:text-lg">
-									COLDWELL BANKER REALTY | DRE# 01891979
+									COLDWELL BANKER REALTY | DRE# 00000000
 								</p>
 								<div id="socials" className="flex pt-4">
 									<FaFacebook className="mx-2 text-2xl transition-all duration-500 hover:cursor-pointer hover:text-neutral-700" />
@@ -60,7 +56,7 @@ const Contact = () => {
 											Name
 										</label>
 										<input
-											className="flex rounded-sm border-2 border-neutral-700 p-3"
+											className="flex rounded-sm border-2 border-neutral-300 p-3"
 											type="text"
 											id="Name"
 											name="name"
@@ -74,7 +70,7 @@ const Contact = () => {
 											Phone Number
 										</label>
 										<input
-											className="flex rounded-sm border-2 border-neutral-700 p-3"
+											className="flex rounded-sm border-2 border-neutral-300 p-3"
 											type="text"
 											id="Phone"
 											name="phone"
@@ -90,7 +86,7 @@ const Contact = () => {
 											Email
 										</label>
 										<input
-											className="flex rounded-sm border-2 border-neutral-700 p-3"
+											className="flex rounded-sm border-2 border-neutral-300 p-3"
 											type="text"
 											id="Email"
 											name="email"
@@ -104,7 +100,7 @@ const Contact = () => {
 											Subject
 										</label>
 										<input
-											className="flex rounded-sm border-2 border-neutral-700 p-3"
+											className="flex rounded-sm border-2 border-neutral-300 p-3"
 											type="text"
 											id="Subject"
 											name="subject"
@@ -119,7 +115,7 @@ const Contact = () => {
 										Message
 									</label>
 									<textarea
-										className="rounded-sm border-2 border-neutral-700 p-3"
+										className="rounded-sm border-2 border-neutral-300 p-3"
 										rows="3"
 										id="Message"
 										name="message"

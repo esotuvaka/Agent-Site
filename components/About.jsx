@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Tamar from '../public/assets/tamar-profile.jpg';
+import Ardito from '../public/assets/ardito.jpg';
 
 const About = () => {
 	return (
@@ -12,27 +12,24 @@ const About = () => {
 					className="col-span-7 sm:col-span-4 md:col-span-4 2xl:m-auto"
 				>
 					<h1 className="ad text-5xl uppercase tracking-widest">About</h1>
-					<h2 className="py-2 text-2xl md:py-4 md:text-3xl ">
-						Meet Tamar Tarkhanian
-					</h2>
+					<h2 className="py-2 text-2xl md:py-4 md:text-3xl ">Meet John Doe</h2>
 
 					<p className="about-paragraph">
-						Team up with a trusted neighborhood partner, and make your real
-						estate dreams come true.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+						quasi numquam cum harum repellat explicabo placeat eos possimus
+						voluptatibus, itaque, ab voluptatum deleniti suscipit temporibus.
+						Numquam quae obcaecati dolores non.
 					</p>
 					<p className="about-paragraph hidden lg:block">
-						I know this area - the right pricing, the latest listings, the ins
-						and outs, and the buzz around town. From search to sale, I&apos;ll
-						provide my strong negotiation skills, expert advice, and unwavering
-						support to help make your experience stress-free.
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+						necessitatibus sit nihil perspiciatis aperiam tenetur, ducimus sunt
+						expedita error! Illo enim excepturi doloremque inventore temporibus
+						officiis quo quaerat dolor perferendis?
 					</p>
 					<p className="about-paragraph">
-						Whether it&apos;s finding you a home with everything on your
-						checklist or helping you get ready to move, I&apos;ve got you
-						covered. Advertising, financing, inspection and closing assistance,
-						I&apos;ll handle it all from start to finish. <br />
-						<br />
-						Give me a call or stop by, I&apos;m right in the neighborhood!
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
+						recusandae officia debitis obcaecati in quam quod est error alias
+						laborum, eius qui molestiae, culpa eaque?
 					</p>
 				</div>
 				<div className="flex sm:hidden" />
@@ -42,7 +39,7 @@ const About = () => {
 					className="col-span-3 flex items-center justify-center sm:ml-4 md:col-span-3 "
 				>
 					<div className="my-2 flex shadow-md shadow-neutral-600 sm:my-0 ">
-						<Image src={Tamar} alt="Real Estate Agent Tamar Tarkhanian" />
+						<Image src={Ardito} alt="/" />
 					</div>
 				</div>
 			</div>

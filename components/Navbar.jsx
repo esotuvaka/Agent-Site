@@ -5,7 +5,7 @@ import Logo from '../public/assets/tamar-logo-b.png';
 import Logo2 from '../public/assets/cb-logo.jpg';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaInstagram, FaFacebook, FaLinkedinIn } from 'react-icons/fa';
-import { gsap, Power4 } from 'gsap';
+import { gsap } from 'gsap';
 
 const NavBar = () => {
 	const [nav, setNav] = useState(false);

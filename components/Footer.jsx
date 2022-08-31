@@ -15,19 +15,19 @@ const Footer = () => {
 				<div className="col-span-3 mb-4 flex flex-row items-center sm:justify-center lg:col-span-1 lg:mb-0 lg:justify-start">
 					<Image src={Logo} alt="/" width="50" height="50" className="" />
 					<p className="ad ml-4 text-lg font-semibold tracking-wider md:ml-4 md:text-xl">
-						Tamar Tarkhanian Real Estate
+						John Doe Real Estate
 					</p>
 				</div>
 				<div className="col-span-3 mt-2 md:mt-0 lg:col-span-2">
 					<p className="text-center text-sm lg:text-left">
-						Tamar is a real estate agent who develops relationships with her
+						John Doe is a real estate agent who develops relationships with his
 						clients to better understand their wants and needs, and to better
 						guide them towards a special property they could call home.
 					</p>
 					<p className="hidden text-center text-sm md:block lg:text-left">
-						She strives to ensure that the home buying and selling experience is
-						fun and stress-free, and she is committed to working hard with
-						integrity and excellent customer service.
+						He strives to ensure that the home buying and selling experience is
+						fun and stress-free, and is committed to working hard with integrity
+						and excellent customer service.
 					</p>
 				</div>
 			</div>
