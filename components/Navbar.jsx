@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/dist/client/image';
-import Logo from '../public/assets/tamar-logo-b.png';
-import Logo2 from '../public/assets/cb-logo.jpg';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaInstagram, FaFacebook, FaLinkedinIn } from 'react-icons/fa';
 import { gsap } from 'gsap';
@@ -31,13 +29,9 @@ const NavBar = () => {
 		>
 			<div className="mx-auto flex h-full w-11/12 items-center justify-between md:w-5/6 2xl:max-w-[67%]">
 				<Link href="/" className="h-[50px] w-[50px] ">
-					<Image
-						src={Logo}
-						alt="/"
-						width="50"
-						height="50"
-						className="hover:cursor-pointer"
-					/>
+					<h1 className=" text-center text-2xl font-semibold tracking-widest">
+						JD
+					</h1>
 				</Link>
 				<div>
 					<ul className="hidden tracking-wider md:flex ">
@@ -59,19 +53,7 @@ const NavBar = () => {
 						<AiOutlineMenu size={25} />
 					</div>
 				</div>
-				<Link
-					href="https://www.coldwellbanker.com/"
-					target="_blank"
-					className="h-[50px] w-[50px]"
-				>
-					<Image
-						src={Logo2}
-						alt="/"
-						width="50"
-						height="50"
-						className="hover:cursor-pointer"
-					/>
-				</Link>
+				<h1 className="p-4 text-center text-xl">BROKER</h1>
 			</div>
 			{/* MOBILE MENU */}
 			<div
@@ -89,7 +71,9 @@ const NavBar = () => {
 					<div>
 						<div className="flex w-full items-center justify-between">
 							<Link href="/">
-								<Image src={Logo} width="50" height="50" alt="/" />
+								<h1 className="p-4 text-center text-2xl font-semibold tracking-widest">
+									JD
+								</h1>
 							</Link>
 							<div
 								onClick={handleNav}

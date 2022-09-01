@@ -13,7 +13,7 @@ const Contact = () => {
 						</h1>
 						<div>
 							<div className="hidden flex-col lg:flex">
-								<h2 className="py-2 text-3xl md:py-4 lg:py-2">JOHN DOE</h2>
+								<h2 className="py-2 text-3xl md:pt-4 md:pb-0 ">JOHN DOE</h2>
 								<h3 className="pt-4 text-xl font-semibold text-neutral-900 lg:text-lg">
 									PHONE
 								</h3>
