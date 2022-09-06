@@ -29,7 +29,7 @@ const NavBar = () => {
 		>
 			<div className="mx-auto flex h-full w-11/12 items-center justify-between md:w-5/6 2xl:max-w-[67%]">
 				<Link href="/" className="h-[50px] w-[50px] ">
-					<h1 className=" text-center text-2xl font-semibold tracking-widest">
+					<h1 className="text-center text-2xl font-semibold tracking-widest hover:cursor-pointer">
 						JD
 					</h1>
 				</Link>
@@ -53,7 +53,7 @@ const NavBar = () => {
 						<AiOutlineMenu size={25} />
 					</div>
 				</div>
-				<h1 className="p-4 text-center text-xl">BROKER</h1>
+				<h1 className="p-4 text-center text-xl hover:cursor-pointer">BROKER</h1>
 			</div>
 			{/* MOBILE MENU */}
 			<div

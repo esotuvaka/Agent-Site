@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { getClient } from '../lib/sanity.server';
 import groq from 'groq';
 import Card from '../components/Card';
@@ -13,7 +12,7 @@ const Home = ({ posts }) => {
 	return (
 		<div className="">
 			<Head>
-				<title>Tamar Tarkhanian | Irvine Real Estate Agent</title>
+				<title>John Doe | Irvine Real Estate Agent</title>
 				<meta name="description" content=" " />
 				<meta name="viewport" content="initial-scale=1.0 width=device-width" />
 				<link rel="icon" href="/favicon.ico" />
