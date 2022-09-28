@@ -41,11 +41,7 @@ const Contact = () => {
 					</div>
 					<div className="col-span-7 flex flex-col justify-center lg:col-span-4">
 						<div>
-							<form
-								action="https://getform.io/f/ae7386ba-66cf-4f42-8157-1a835eb7c012"
-								method="POST"
-								className="mx-auto flex flex-col "
-							>
+							<form className="mx-auto flex flex-col ">
 								<h1 className="ad hidden text-5xl text-white lg:block">l</h1>
 								<div className="grid w-full py-2 sm:grid-cols-2 sm:gap-4 md:pt-8 lg:pt-4">
 									<div className="flex flex-col">
