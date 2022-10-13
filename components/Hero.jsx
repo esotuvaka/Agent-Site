@@ -47,33 +47,15 @@ const Hero = () => {
 						ref={(el) => (heroSocials = el)}
 						className="flex max-w-[300px] items-center justify-center py-4"
 					>
-						<a
-							rel="noreferrer"
-							href="https://www.linkedin.com/in/tamartarkhanian/"
-							target="_blank"
-							className="social-link"
-							alt="Link to Tamar's LinkedIn"
-						>
-							<FaLinkedinIn />
-						</a>
-						<a
-							rel="noreferrer"
-							href="https://www.facebook.com/tamartarkhanianrealtor"
-							target="_blank"
-							className="social-link"
-							alt="Link to Tamar's Facebook"
-						>
+						<div className="social-link">
 							<FaFacebook />
-						</a>
-						<a
-							rel="noreferrer"
-							href="https://www.instagram.com/tamartar/"
-							target="_blank"
-							className="social-link"
-							alt="Link to Tamar's Instagram"
-						>
+						</div>
+						<div className="social-link">
+							<FaLinkedinIn />
+						</div>
+						<div className="social-link">
 							<FaInstagram />
-						</a>
+						</div>
 					</div>
 				</div>
 				<div className="mx-auto flex h-full w-full max-w-[1240px] items-center justify-center p-2 2xl:max-w-[67%]">
